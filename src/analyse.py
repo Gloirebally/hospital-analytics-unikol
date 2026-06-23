@@ -45,3 +45,22 @@ def analyse_avancee(df):
         analyse['age_max'] = df['Age'].max()
 
     return analyse
+def generer_top5_insights(df, stats, analyse):
+    insights = []
+    if 'service_top' in analyse:
+        insights.append({'icone': '🏥', 'titre': 'Service le plus fréquenté', 'valeur': analyse['service_top'], 'desc': f"{analyse['service_top_count']} patients", 'couleur': '#1976D2'})
+    if 'diag_top' in analyse:
+        insights.append({'icone': '🩺', 'titre': 'Diagnostic principal', 'valeur': analyse['diag_top'], 'desc': 'Cas le plus récurrent', 'couleur': '#42A5F5'})
+    insights.append({'icone': '👥', 'titre': 'Total patients', 'valeur': stats['total_patients'], 'desc': 'Sur la période', 'couleur': '#0A1F44'})
+    insights.append({'icone': '🎂', 'titre': 'Âge moyen', 'valeur': f"{stats['age_moyen']} ans", 'desc': 'Population', 'couleur': '#64B5F6'})
+    if stats['temps_attente_moyen'] > 0:
+        insights.append({'icone': '⏱', 'titre': 'Temps attente moyen', 'valeur': f"{stats['temps_attente_moyen']} min", 'desc': 'À optimiser', 'couleur': '#90CAF9'})
+    return insights[:5]
+
+def calculer_score_hospitalier(stats, df):
+    score = 50
+    if stats['temps_attente_moyen'] < 15: score += 20
+    elif stats['temps_attente_moyen'] < 30: score += 10
+    if stats['total_patients'] > 20: score += 10
+    if stats['nb_services'] > 3: score += 10
+    return min(100, score)
