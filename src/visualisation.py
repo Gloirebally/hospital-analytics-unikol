@@ -157,3 +157,12 @@ def graphique_heatmap(df):
         aggfunc='size',  # <- CORRECTION ICI
         fill_value=0
     )
+    def statistiques_generales(df):
+    """Calcule les stats générales du dataframe"""
+    stats = {
+        'total_patients': len(df),
+        'nb_services': df['Service'].nunique() if 'Service' in df.columns else 0,
+        'sexe_repartition': df['Sexe'].value_counts().to_dict() if 'Sexe' in df.columns else {},
+        'statut_repartition': df['Statut'].value_counts().to_dict() if 'Statut' in df.columns else {}
+    }
+    return stats
