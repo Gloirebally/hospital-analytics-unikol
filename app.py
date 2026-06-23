@@ -420,9 +420,9 @@ if fichier:
             st.success(anomalie_msg)
 
         col1, col2, col3, col4 = st.columns(4, gap="large")
-        animate_metric(col1, "👥 Patients", stats["Nombre total de patients"])
-        animate_metric(col2, "🎂 Âge moyen", stats["Age moyen"])
-        animate_metric(col3, "⏱ Temps attente", stats["Temps d\'attente moyen"], " min")
+        animate_metric(col1, "👥 Patients", stats["total_patients"])
+        animate_metric(col2, "🎂 Âge moyen", stats["age_moyen"])
+        animate_metric(col3, "⏱ Temps attente", stats["temps_attente_moyen"], " min")
         animate_metric(col4, "🏥 Services", df["Service"].nunique())
         
         st.markdown("<br>", unsafe_allow_html=True)
