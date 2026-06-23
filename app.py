@@ -501,6 +501,22 @@ if fichier:
             file_name="rapport_hospitalier.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
+        # ===== FOOTER =====
+        st.markdown("---")
+        footer = """
+        <style>
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 13px;
+        }
+        </style>
+        <div class="footer">
+            🏥 Hospital Analytics Dashboard | Développé par ESI | v1.0 | © 2026
+        </div>
+        """
+        st.markdown(footer, unsafe_allow_html=True)
 
         # PDF Pro avec bandeau bleu + logo
         pdf_buffer = io.BytesIO()
