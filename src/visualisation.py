@@ -165,3 +165,18 @@ def statistiques_generales(df):
 	'statut_repartition': df['Statut'].value_counts().to_dict() if 'Statut' in df.columns else {}
 	}
 	return stats
+	
+def generer_conclusion(df, stats):
+    """Génère un texte de conclusion basé sur les stats"""
+    total = stats.get('total_patients', len(df))
+    service_top = df['Service'].mode()[0] if 'Service' in df.columns and not df['Service'].empty else "N/A"
+
+    conclusion = f"""
+    **Conclusion de l'analyse :**
+    - Total patients analysés : {total}
+    - Service le plus fréquenté : {service_top}
+    - Données filtrées selon les critères sélectionnés.
+
+    L'analyse a été réalisée avec succès sur les données fournies.
+    """
+    return conclusion
