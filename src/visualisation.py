@@ -192,3 +192,29 @@ def graphique_diagnostics(df):
                  color_continuous_scale='Blues')
     fig.update_layout(showlegend=False)
     return fig
+import plotly.graph_objects as go
+
+def graphique_score(score):
+    """Jauge Plotly pour le score de performance hospitalier"""
+    fig = go.Figure(go.Indicator(
+        mode = "gauge+number+delta",
+        value = score,
+        domain = {'x': [0, 1], 'y': [0, 1]},
+        title = {'text': "Score de performance", 'font': {'size': 20, 'color': '#0A1F44'}},
+        gauge = {
+            'axis': {'range': [None, 100]},
+            'bar': {'color': "#1976D2"},
+            'steps': [
+                {'range': [0, 40], 'color': "#EF5350"},
+                {'range': [40, 70], 'color': "#FFA726"},
+                {'range': [70, 100], 'color': "#66BB6A"}
+            ],
+            'threshold': {
+                'line': {'color': "red", 'width': 4},
+                'thickness': 0.75,
+                'value': 90
+            }
+        }
+    ))
+    fig.update_layout(height=250, margin=dict(l=20, r=20, t=40, b=20))
+    return fig
