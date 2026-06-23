@@ -180,3 +180,13 @@ def generer_conclusion(df, stats):
     L'analyse a été réalisée avec succès sur les données fournies.
     """
     return conclusion
+def graphique_diagnostics(df):
+    """Top 5 diagnostics"""
+    if 'Diagnostic' not in df.columns:
+        return None
+    top5 = df['Diagnostic'].value_counts().head(5)
+    fig = px.bar(x=top5.values, y=top5.index, orientation='h', 
+                 title="Top 5 Diagnostics", color=top5.values, 
+                 color_continuous_scale='Blues')
+    fig.update_layout(showlegend=False)
+    return fig
