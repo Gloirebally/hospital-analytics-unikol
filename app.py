@@ -452,36 +452,27 @@ if fichier:
             st.plotly_chart(graphique_score(score), use_container_width=True,key="score_jauge_unique")
 
     with tab2:
-        st.subheader("📊 Fréquentation par service")
+        st.subheader("🏥 Fréquentation par service")
         fig1 = graphique_services(df)
-        st.pyplot(fig1)
-
-        st.subheader("👨‍⚕️ Répartition par sexe")
+        st.plotly_chart(fig1, use_container_width=True)
+    
+        st.subheader("👥 Répartition par sexe")
         fig2 = graphique_sexe(df)
-        st.pyplot(fig2)
-
+        st.plotly_chart(fig2, use_container_width=True)
+    
         st.subheader("🩺 Top diagnostics")
         fig3 = graphique_diagnostics(df)
         if fig3 is not None:
-         st.plotly_chart(fig3, use_container_width=True)
-
-        st.subheader("📋 Répartition des statuts")
+            st.plotly_chart(fig3, use_container_width=True)
+    
+        st.subheader("📊 Répartition des statuts")
         fig4 = graphique_statuts(df)
-        st.pyplot(fig4)
-
-        st.subheader("📊 Distribution des âges")
+        st.plotly_chart(fig4, use_container_width=True)
+    
+        st.subheader("📈 Distribution des âges")
         fig5 = histogramme_ages(df)
-        st.pyplot(fig5)
+        st.plotly_chart(fig5, use_container_width=True)
         
-        st.markdown("---")
-        st.subheader("🗓️ Analyse Temporelle")
-        heatmap_fig = graphique_heatmap(df)
-        if heatmap_fig:
-            st.plotly_chart(heatmap_fig, use_container_width=True)
-            st.caption("💡 Zones bleu nuit = heures de pic. Zones bleu clair = creux d'activité")
-        else:
-            st.info("Ajoute une colonne 'Date' avec heure pour activer la heatmap")
-            
     with tab3:
         st.subheader("📥 Exportation des données")
 
