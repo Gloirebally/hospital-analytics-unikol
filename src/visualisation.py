@@ -158,13 +158,15 @@ def graphique_heatmap(df):
         fill_value=0
     )
 def statistiques_generales(df):
-	stats = {
-	'total_patients': len(df),
-	'nb_services': df['Service'].nunique() if 'Service' in df.columns else 0,
-	'sexe_repartition': df['Sexe'].value_counts().to_dict() if 'Sexe' in df.columns else {},
-	'statut_repartition': df['Statut'].value_counts().to_dict() if 'Statut' in df.columns else {}
-	}
-	return stats
+    stats = {
+        'total_patients': len(df),
+        'age_moyen': round(df['Age'].mean(), 1) if 'Age' in df.columns else 0,
+        'temps_attente_moyen': round(df['Temps_attente'].mean(), 1) if 'Temps_attente' in df.columns else 0,
+        'nb_services': df['Service'].nunique() if 'Service' in df.columns else 0,
+        'sexe_repartition': df['Sexe'].value_counts().to_dict() if 'Sexe' in df.columns else {},
+        'statut_repartition': df['Statut'].value_counts().to_dict() if 'Statut' in df.columns else {}
+    }
+    return stats
 	
 def generer_conclusion(df, stats):
     """Génère un texte de conclusion basé sur les stats"""
