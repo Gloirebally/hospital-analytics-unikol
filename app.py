@@ -11,7 +11,6 @@ from reportlab.lib.colors import HexColor
 from reportlab.platypus import SimpleDocTemplate,Table, TableStyle,paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle 
 from reportlab.lib import colors
-from src.utils import *
 from src.analyse import *
 from src.visualisation import *
 from reportlab.lib.utils import ImageReader
