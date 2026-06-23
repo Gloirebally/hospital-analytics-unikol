@@ -1,0 +1,27 @@
+﻿ID_Patient;Date_Consultation;Age;Sexe;Service;Diagnostic;Temps_Attente;Statut;Date
+P003;06/01/2026;8;M;Pédiatrie;Fièvre;20;Hospitalisé;15/06/2026 08:30
+P004;06/01/2026;40;F;Urgences;Accident;5;Référé;15/06/2026 09:15
+P005;07/01/2026;18;F;Consultation Générale;Paludisme;12;Consulté;15/06/2026 10:00
+P006;07/01/2026;55;M;Médecine Interne;Hypertension;18;Hospitalisé;16/06/2026 14:20
+P007;08/01/2026;51;M;Urgences;Accident;20;Consulté;16/06/2026 15:45
+P008;09/01/2026;18;M;Consultation Générale;Paludisme;10;Consulté;17/06/2026 08:05
+P009;10/01/2026;70;M;Médecine Interne;Hypertension;30;Consulté;18/06/2026 08:05
+P010;11/01/2026;25;F;Médecine Interne;Paludisme;10;Consulté;19/06/2026 08:05
+P011;12/01/2026;14;M;Médecine Interne;Paludisme;20;Consulté;20/06/2026 08:05
+P012;13/01/2026;19;M;Médecine Interne;Paludisme;50;Consulté;21/06/2026 08:05
+P013;14/01/2026;60;F;Médecine Interne;Paludisme;10;Consulté;22/06/2026 08:05
+P014;15/01/2026;23;F;Médecine Interne;Paludisme;5;Consulté;23/06/2026 08:05
+P015;16/01/2026;20;F;Consultation Générale;Paludisme;59;Hospitalisé;24/06/2026 08:05
+P016;17/01/2026;14;F;Urgences;Accident;30;Référé;25/06/2026 08:05
+P017;18/01/2026;50;F;Consultation Générale;Hypertension;10;Consulté;26/06/2026 08:05
+P018;19/01/2026;25;M;Consultation Générale;Paludisme;25;Hospitalisé;27/06/2026 08:05
+P019;20/01/2026;90;F;Consultation Générale;Hypertension;3;Consulté;28/06/2026 08:05
+P020;21/01/2026;17;M;Consultation Générale;Fièvre;80;Hospitalisé;29/06/2026 08:05
+P021;22/01/2026;60;F;Médecine Interne;Fièvre;20;Hospitalisé;30/06/2026 08:05
+P022;23/01/2026;32;F;Consultation Générale;Fièvre;4;Hospitalisé;01/07/2026 08:05
+P023;24/01/2026;20;M;Consultation Générale;Paludisme;20;Hospitalisé;02/07/2026 08:05
+P024;25/01/2026;84;M;Consultation Générale;Hypertension;20;Consulté;03/07/2026 08:05
+P025;26/01/2026;14;M;Urgences;Accident;20;Référé;04/07/2026 08:05
+P026;27/01/2026;15;M;Urgences;Accident;15;Référé;05/07/2026 08:05
+P027;28/01/2026;3;F;Pédiatrie;Fièvre;30;Hospitalisé;06/07/2026 08:05
+P028;29/01/2026;60;F;Consultation Générale;Paludisme;20;Hospitalisé;07/07/2026 08:05
