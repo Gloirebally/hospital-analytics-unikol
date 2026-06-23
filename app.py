@@ -462,7 +462,8 @@ if fichier:
 
         st.subheader("🩺 Top diagnostics")
         fig3 = graphique_diagnostics(df)
-        st.pyplot(fig3)
+        if fig3 is not None:
+         st.plotly_chart(fig3, use_container_width=True)
 
         st.subheader("📋 Répartition des statuts")
         fig4 = graphique_statuts(df)
