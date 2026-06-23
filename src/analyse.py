@@ -26,3 +26,22 @@ def generer_rapport(df):
 def detecter_anomalies_avancees(df):
     """Détection d'anomalies avancée - version simplifiée"""
     return detecter_anomalies(df)
+def analyse_avancee(df):
+    """Analyse avancée pour générer insights"""
+    analyse = {}
+
+    if 'Service' in df.columns:
+        analyse['service_top'] = df['Service'].value_counts().index[0]
+        analyse['service_top_count'] = df['Service'].value_counts().iloc[0]
+
+    if 'Diagnostic' in df.columns:
+        analyse['diag_top'] = df['Diagnostic'].value_counts().index[0]
+
+    if 'Temps_attente' in df.columns:
+        analyse['attente_max'] = df['Temps_attente'].max()
+
+    if 'Age' in df.columns:
+        analyse['age_min'] = df['Age'].min()
+        analyse['age_max'] = df['Age'].max()
+
+    return analyse
